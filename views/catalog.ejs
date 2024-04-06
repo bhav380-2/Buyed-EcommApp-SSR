@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/catalog.css">
+
+
+
+<div class="catalog">
+
+    <%if(settingsData.view=='carousel'){%>
+        <div class="carousel">
+            <% products.forEach((product)=> { %>
+                <div class="carousel-item">
+                    <%- include('_productCard',{settingsData,product}); %>
+
+                </div>
+                <% }) %>
+        </div>
+    
+
+
+    <%}else{%>
+
+        <div class="view-all">
+            <% products.forEach((product)=> { %>
+
+                <%- include('_productCard',{settingsData,product}); %>
+
+                 
+              
+                <% }) %>
+        </div>
+
+
+   <% }%>
+
+    
+    
+</div>

@@ -1,0 +1,30 @@
+
+<link rel="stylesheet" href="/css/setting.css">
+<div class="settings-container">
+
+    <h1 class="settings-title">Settings</h1>
+    <form action="/updateSettings" method="POST">
+        <div class="form-group">
+            <label for="navbarType" class="input-label">Navbar Type:</label>
+            <select name="navbarType" id="navbarType" class="select-field">
+                <option value="navbar1">Navbar 1</option>
+                <option value="navbar2">Navbar 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="productCardType" class="input-label">Product Card Type:</label>
+            <select name="productCardType" id="productCardType" class="select-field">
+                <option value="productCard1">Product Card 1</option>
+                <option value="productCard2">Product Card 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="catalogView" class="input-label">Catalog View:</label>
+            <select name="catalogView" id="catalogView" class="select-field">
+                <option value="carousel">Carousel</option>
+                <option value="viewAll">View All</option>
+            </select>
+        </div>
+        <button type="submit">Save Settings</button>
+    </form>
+</div>

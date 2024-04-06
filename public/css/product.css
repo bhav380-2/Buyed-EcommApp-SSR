@@ -1,0 +1,45 @@
+/* Styles for mobile devices */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    margin-top: 10px;
+  }
+  
+  .product-title {
+    font-weight: bold;
+  }
+  
+  .product-price {
+    color: green;
+  }
+  
+  /* Media query for devices with screen width greater than 720px */
+  @media (min-width: 720px) {
+    .product-card {
+      padding: 15px;
+    }
+  }
+  
+  /* Media query for devices with screen width greater than 992px */
+  @media (min-width: 992px) {
+    .product-card {
+      padding: 20px;
+    }
+  }
+  
+  /* Media query for devices with screen width greater than 1080px */
+  @media (min-width: 1080px) {
+    .product-card {
+      padding: 25px;
+    }
+  }
+  
