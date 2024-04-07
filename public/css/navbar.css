@@ -1,94 +1,286 @@
-/* Styles for mobile devices */
+
+
 .navbar {
-    background-color: #333;
-    color: #fff;
-    height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  color: black;
+  height: 50px;
+}
+
+.navbar .logo {
+  padding: 0 15px;
+  font-size: 0.9rem;
+}
+
+
+
+.navbar .logo a{
+
+  display: inline-block;
+  font-family: cursive;
+
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+.navbar .logo a::first-letter{
+
+  font-size: 1.35rem;
+}
+
+.navbar1 .links {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -10.5px;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.navbar .links .nav-item {
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding: 3px;
+}
+
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar1 .nav-item:hover {
+  border-bottom: 0.5px solid black;
+}
+
+.navbar2 .nav-item:hover {
+  color:darkred;
+}
+
+
+.navbar .links .nav-item {
+  display: flex;
+  box-shadow: 1px 1px 2px 2px lightgray;
+  /* width: 11.5vw; */
+  /* width:50px; */
+
+}
+
+.navbar .links .nav-item i {
+
+  display: none;
+  position: relative;
+  left: -4px;
+  color: red;
+
+}
+
+
+/* ____________navbar2 */
+
+.links2{
+  display: none;
+  /* border:2px solid red; */
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  position:absolute;
+  top:50px;
+  right:0px;
+  height:200px;
+  width:130px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+}
+
+.links2 .nav-item{
+  margin-top:10px;
+  margin-bottom: 10px;
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.links2 .nav-item i{
+  margin-left:15px;
+  margin-right:15px;
+  color:red;
+  font-size: 0.95rem;
+  width:20px;
+}
+
+
+.links2 .nav-item span{
+  font-size:0.9rem;
+  width:80px;
+}
+
+
+
+
+
+#menu-icon{
+  position: relative;
+  left:-12px;
+}
+
+
+/* Media query for small devices (phones) */
+@media (min-width: 480px) {
+
+
+
+  .navbar .logo a{
+    font-size: 0.95rem;
+  }
+  .navbar .logo a::first-letter{
+    font-size: 1.8rem;
+  }
+  .navbar {
+    height: 55px;
+  }
+
+  .navbar1 .links {
+
+    width: 360px;
+  }
+
+  .navbar1 .links a:nth-child(5) span{
+    position: relative;
+    left: 3px;
+
+  }
+
+  .navbar1 .links a:nth-child(5) i{
+    left:0px;
+
+  }
+
+
+  .navbar .links .nav-item i {
+
+    display: inline;
+    position: relative;
+    color: red;
+
+  }
+
+
+  .navbar .links .nav-item {
+    width: 130px;
+  }
+
+  .links2{
+    width:155px;
+    height: 215px;
+  
+  }
+
+  .links2 .nav-item{
+    margin-top:12px;
+    margin-bottom: 12px;
+  }
+  .links2 .nav-item i{
+    margin-left:18px;
+    margin-right:19px;
+    font-size: 1rem;
   }
   
-  .nav-item {
-    padding: 0 15px;
-    text-decoration: none;
-    color: inherit;
+  
+  .links2 .nav-item span{
+    font-size:1rem;
+    width:82px;
   }
-  
-  .nav-item:hover {
-    color: #ff0;
+
+
+
+  .navbar .links .nav-item i{
+    position: relative;
+    left:-2px;
   }
+
   
-  /* Media query for small devices (phones) */
-  @media (min-width: 320px) {
-    .navbar {
-      height: 40px;
-    }
+  
+
+}
+
+
+@media (min-width: 720px) {
+
+
+
+
+  .navbar .logo a{
+    font-size: 1.1rem;
   }
-  
-  /* Media query for medium devices (tablets) */
-  @media (min-width: 768px) {
-    .navbar {
-      justify-content: center;
-    }
+  .navbar .logo a::first-letter{
+    font-size: 2.5rem;
   }
-  
-  /* Media query for large devices (small laptops/desktops) */
-  @media (min-width: 1024px) {
-    .navbar {
-      height: 60px;
-    }
+
+  .navbar {
+    /* height: 130px; */
+    height:75px;
   }
+
+  .links2{
+    top:60px;
   
-  /* Media query for extra-large devices (large laptops/desktops) */
-  @media (min-width: 1440px) {
-    .navbar {
-      height: 70px;
-    }
   }
-  
-  /* Styles for navbar2 */
-  
-  /* Styles for mobile devices */
-  .navbar2 {
-    background-color: #f4f4f4;
-    padding: 10px;
+  .navbar1 .links {
+
+
+    margin-left:30px;
+    width: 610px;
   }
-  
-  .nav-item {
-    padding: 8px 0;
-    text-align: center;
-    cursor: pointer;
+
+  .navbar1 .links .nav-item {
+
+    width:180px;
+    height:30px;
+    font-size: 1.04rem;
+    margin-left:20px;
   }
-  
-  .nav-item:hover {
-    background-color: #ddd;
+  .navbar1 .links a:nth-child(5) i{
+    left:-8px;
+
   }
-  
-  /* Media query for small devices (phones) */
-  @media (min-width: 320px) {
-    .navbar2 {
-      padding: 5px;
-    }
+
+
+  .navbar .links .nav-item i{
+    /* border: 2px solid red;; */
+    font-size:1.05rem;
+    position: relative;
+    left:-7px;
+    /* top:1px; */
   }
-  
-  /* Media query for medium devices (tablets) */
-  @media (min-width: 768px) {
-    .navbar2 {
-      width: 200px;
-      padding: 10px;
-    }
+
+
+
+}
+
+
+/* Media query for large devices (small laptops/desktops) */
+@media (min-width: 992px) {
+ 
+  .navbar .logo a{
+    font-size: 1.15rem;
   }
-  
-  /* Media query for large devices (small laptops/desktops) */
-  @media (min-width: 1024px) {
-    .navbar2 {
-      width: 250px;
-      padding: 15px;
-    }
+  .navbar .logo a::first-letter{
+    font-size: 2.8rem;
   }
+
+  .links2{
+    top:60px;
   
-  /* Media query for extra-large devices (large laptops/desktops) */
-  @media (min-width: 1440px) {
-    .navbar2 {
-      width: 300px;
-      padding: 20px;
-    }
   }
-  
+
+
+}
+

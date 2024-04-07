@@ -3,7 +3,7 @@
     padding: 20px;
   }
   
-  .product-card {
+  /* .product-card {
 
     padding: 10px;
     margin-bottom: 20px;
@@ -24,7 +24,7 @@
   
   .product-price {
     color: green;
-  }
+  } */
   
   /* .carousel {
     display: flex;
@@ -107,11 +107,11 @@
 .carousel-item {
     scroll-snap-align: start;
     flex: 0 0 auto;
-    width: 80%; /* Adjust as needed */
+    width: 76.5%; /* Adjust as needed */
     margin-right: 10px; /* Adjust as needed */
 }
 
-.product-card {
+/* .product-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
@@ -133,14 +133,20 @@
 }
 
 .product-price {
-    color: #007bff; /* Adjust as needed */
-}
+    color: #007bff; 
+} */
 
 /* Larger screen styles (720px and above) */
-@media (min-width: 720px) {
+@media (min-width: 480px) {
     .carousel-item {
-        width: 40%; /* Adjust as needed */
+        width: 52%; /* Adjust as needed */
     }
+}
+
+@media (min-width: 720px) {
+  .carousel-item {
+      width: 38%; /* Adjust as needed */
+  }
 }
 
 /* Tablet and desktop styles (992px and above) */
@@ -154,12 +160,5 @@
 @media (min-width: 1080px) {
     .carousel-item {
         width: 25%; /* Adjust as needed */
-    }
-}
-
-/* Styles for screens larger than 1080px */
-@media (min-width: 1080px) {
-    .carousel-item {
-        width: 20%; /* Adjust as needed */
     }
 }

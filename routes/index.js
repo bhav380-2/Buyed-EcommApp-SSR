@@ -15,7 +15,7 @@ router.get('/',catalogController.catalogPage);
 
 router.get('/settings',settingController.settingsPage);
 
-router.put('/updateSettings',settingController.updateSettings);
+router.post('/updateSettings',settingController.updateSettings);
 
 module.exports = router;
 

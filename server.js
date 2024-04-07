@@ -8,9 +8,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 module.exports.settingsData = {
-    navbar:'navbar1',
-    view:'scroll',
-    productCard:'type1'
+    navbar: 'navbar1',
+    view: 'carousel',
+    productCard: 'type2'
 };
 
 // Serve static files
@@ -29,7 +29,7 @@ app.set('layout extractScripts', true);
 
 //_________BodyParser__________
 app.use(express.urlencoded({ extended: false }));
-app.use('/',require('./routes/index'));
+app.use('/', require('./routes/index'));
 
 
 
