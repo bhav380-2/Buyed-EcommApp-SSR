@@ -4,11 +4,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //intial setting values
-module.exports.settingsData = {
-    navbar: 'navbar2',
-    view: 'viewAll',
-    productCard: 'type2'
-};
+// module.exports.settingsData = {
+//     navbar: 'navbar2',
+//     view: 'viewAll',
+//     productCard: 'type2'
+// };
 
 app.use(express.static('public'));
 

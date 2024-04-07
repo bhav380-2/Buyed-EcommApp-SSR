@@ -2,7 +2,7 @@
 <div class="settings-container">
 
     <h1 class="settings-title">Settings</h1>
-    <form action="/updateSettings" method="POST">
+    <form id="updateSettings" action="/updateSettings" method="POST">
         <div class="form-group">
             <label for="navbarType" class="input-label">Navbar Type:</label>
             <select name="navbarType" id="navbarType" class="select-field">
@@ -27,3 +27,5 @@
         <button type="submit">Save Settings</button>
     </form>
 </div>
+
+<script src="/js/settings.js"></script>

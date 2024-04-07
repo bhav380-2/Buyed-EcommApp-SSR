@@ -1,50 +1,26 @@
 <link rel="stylesheet" href="/css/catalog.css">
 
 
-
 <div class="catalog">
 
+    <div class="carousel">
+        <% products.forEach((product)=> { %>
+            <div class="carousel-item">
+                <%- include('_productCard',{product}); %>
 
-    <%if(settingsData.productCard=='type1'){%>
-        <div id="card-type" data-cardtype="type1"></div>
+            </div>
+            <% }) %>
+    </div>
 
-        <%}else{%>
+    <div class="view-all">
+        <% products.forEach((product)=> { %>
 
-            <div id="card-type" data-cardtype="type2"></div>
+            <%- include('_productCard',{product}); %>
 
-
-            <%}%>
-
-
-                <%if(settingsData.view=='carousel'){%>
-                    <div class="carousel">
-                        <% products.forEach((product)=> { %>
-                            <div class="carousel-item">
-                                <%- include('_productCard',{settingsData,product}); %>
-
-                            </div>
-                            <% }) %>
-                    </div>
-
-
-
-                    <%}else{%>
-
-                        <div class="view-all">
-                            <% products.forEach((product)=> { %>
-
-                                <%- include('_productCard',{settingsData,product}); %>
-
-
-
-                                    <% }) %>
-                        </div>
-
-
-                        <% }%>
-
-
-
+                <% }) %>
+    </div>
 </div>
 
 <script src="/js/catalog.js"></script>
+
+<script src="/js/product.js"></script>

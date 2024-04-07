@@ -171,3 +171,8 @@
     padding: 20px;
   }
 }
+
+
+.product-card-1{
+  display: none;
+}

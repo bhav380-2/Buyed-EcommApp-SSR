@@ -1,6 +1,13 @@
+if(!localStorage.getItem('navbar')) {
+
+    localStorage.setItem("navbar", "navbar2");
+    localStorage.setItem("view", "viewAll")
+    localStorage.setItem("productCard", "type2")
+
+}
+
 
 const container = document.getElementsByClassName('view-all'); //product container
-
 
 // function for appending type1 product box to container
 const appendType1ProductsToCatalog = (products) => {
@@ -8,6 +15,7 @@ const appendType1ProductsToCatalog = (products) => {
     products.forEach(product => {
         const productElement = document.createElement('div');
         productElement.classList.add('product-card-1');
+        productElement.style.display='flex';
         productElement.innerHTML = `
         <div class="img-container">
         <img src="${product.image}" alt="${product.title}" class="product-image">
@@ -28,6 +36,7 @@ const appendType1ProductsToCatalog = (products) => {
     </div>
         `;
         container[0].appendChild(productElement);
+
     });
 };
 
@@ -51,21 +60,21 @@ const appendType2ProductsToCatalog = (products) => {
     </div>
 
         `;
-        viewAllContainer[0].appendChild(productElement);
+        container[0].appendChild(productElement);
     });
 };
 
 
 let currentPage = 1; // used for storing value of curr page number (product api) --> fakestoreapi does not provide pagination (here its of no use)
-let flag = false; 
+let flag = false;
 const fetchMoreProducts = async () => {
     try {
+        console.log("fetch")
         const response = await fetch(`https://fakestoreapi.com/products?page=${currentPage + 1}`);
         const data = await response.json();
 
-        let cardType = document.querySelector('#card-type').getAttribute('data-cardType');
 
-        if (cardType == 'type1') {
+        if (localStorage.getItem('productCard') == 'type1') {
             appendType1ProductsToCatalog(data);
 
         } else {
@@ -75,16 +84,19 @@ const fetchMoreProducts = async () => {
         }
 
         currentPage++;
-        
+
     } catch (error) {
         console.error('Error fetching more products:', error);
     }
 };
 
 const checkScroll = () => {
-    const scrollThreshold = 50;
+
+    console.log("chd");
+    const scrollThreshold = 200;
     const scrollPosition = window.innerHeight + window.scrollY;
     const documentHeight = document.body.offsetHeight;
+    
 
     if (scrollPosition >= documentHeight - scrollThreshold && flag) {
         fetchMoreProducts();
@@ -92,6 +104,28 @@ const checkScroll = () => {
     flag = true;
 };
 
-window.addEventListener('scroll', checkScroll);
+console.log(localStorage.getItem('view'))
+if(localStorage.getItem('view')=='viewAll'){
+    console.log("hi")
+    window.addEventListener('scroll', checkScroll);
+    console.log("hiieieie")
 
-fetchMoreProducts();
+
+}
+
+
+// _____________catalog page view______________________
+
+let carousel = document.querySelector('.carousel');
+let viewAll = document.querySelector('.view-all');
+
+
+if (localStorage.getItem('view') == 'carousel') {
+
+    carousel.style.display = 'flex';
+    viewAll.style.display = 'none';
+} else {
+
+    carousel.style.display = 'none';
+    viewAll.style.display = 'grid';
+}

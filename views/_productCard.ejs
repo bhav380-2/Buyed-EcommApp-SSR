@@ -1,45 +1,42 @@
 <link rel="stylesheet" href="/css/product.css">
 
 
-<%if(settingsData.productCard=='type1'){%>
 
 
 
-    <div class="product-card-1">
+<div class="product-card-1">
 
-        <div class="img-container">
-            <img src="<%= product.image %>" alt="<%= product.title %>" class="product-image">
+    <div class="img-container">
+        <img src="<%= product.image %>" alt="<%= product.title %>" class="product-image">
+    </div>
+
+    <div class="product-info">
+        <div class="product-title">
+            <%= product.title %>
         </div>
-
-        <div class="product-info">
-            <div class="product-title">
-                <%= product.title %>
-            </div>
-            <div class="product-price">$<%= product.price %>
-            </div>
-        </div>
-
-        <div class="buttons">
-            <button class="buy">Buy Now</button>
-            <button class="add-cart">Add to Cart</button>
-
+        <div class="product-price">$<%= product.price %>
         </div>
     </div>
 
-    <%}else{%>
+    <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="add-cart">Add to Cart</button>
+
+    </div>
+</div>
 
 
-        <div class="product-card-2">
-            <div class="img-container">
-                <img src="<%= product.image %>" alt="<%= product.title %>" class="product-image">
-            </div>
 
-            <div class="product-info">
-                <div class="product-title">
-                    <%= product.title %>
-                </div>
-                <div class="product-price">$<%= product.price %>
-                </div>
-            </div>
+<div class="product-card-2">
+    <div class="img-container">
+        <img src="<%= product.image %>" alt="<%= product.title %>" class="product-image">
+    </div>
+
+    <div class="product-info">
+        <div class="product-title">
+            <%= product.title %>
         </div>
-        <%}%>
+        <div class="product-price">$<%= product.price %>
+        </div>
+    </div>
+</div>

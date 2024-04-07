@@ -13,8 +13,6 @@ const settingController = new SettingsController();
 router.get('/',catalogController.catalogPage);
 router.get('/settings',settingController.settingsPage);
 
-// ____post requests_______
-router.post('/updateSettings',settingController.updateSettings);
 
 module.exports = router;
 
