@@ -1,164 +1,99 @@
-/* Styles for mobile devices */
+
 .catalog {
-    padding: 20px;
-  }
-  
-  /* .product-card {
+  padding: 20px;
+}
 
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .product-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .product-info {
-    margin-top: 10px;
-  }
-  
-  .product-title {
-    font-weight: bold;
-  }
-  
-  .product-price {
-    color: green;
-  } */
-  
-  /* .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .carousel-item {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    margin-right: 10px;
-  } */
-  
-  .view-all {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Media query for devices with screen width between 720px and 991px (tablets) */
-  @media (min-width: 720px) and (max-width: 991px) {
-    .catalog {
-      padding: 30px;
-    }
-  
-    .product-card {
-      padding: 15px;
-    }
-  
-    .carousel {
-      margin-bottom: 30px;
-    }
-  }
-  
-  /* Media query for devices with screen width between 992px and 1079px (small laptops/desktops) */
-  @media (min-width: 992px) and (max-width: 1079px) {
-    .catalog {
-      padding: 40px;
-    }
-  
-    .product-card {
-      padding: 20px;
-    }
-  
-    .carousel {
-      margin-bottom: 40px;
-    }
-  }
-  
-  /* Media query for devices with screen width equal to or greater than 1080px (large laptops/desktops) */
-  @media (min-width: 1080px) {
-    .catalog {
-      padding: 50px;
-    }
-  
-    .product-card {
-      padding: 25px;
-    }
-  
-    .carousel {
-      margin-bottom: 50px;
-    }
-  }
-  
+/* __________view all styling___________ */
+.view-all {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
 
 
-
-
-
-/* ****************************************************** */
-  /* Mobile-first styles */
+/* __________carousel styling_________ */
 
 .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-item {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
-    width: 76.5%; /* Adjust as needed */
-    margin-right: 10px; /* Adjust as needed */
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 76.5%;
+  margin-right: 10px;
 }
 
-/* .product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* _________________media queries_______________ */
+@media (min-width: 720px) and (max-width: 991px) {
+  .catalog {
+    padding: 30px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .carousel {
+    margin-bottom: 30px;
+  }
 }
 
-.product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+@media (min-width: 992px) and (max-width: 1079px) {
+  .catalog {
+    padding: 40px;
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  .carousel {
+    margin-bottom: 40px;
+  }
 }
 
-.product-info {
-    margin-top: 10px;
+@media (min-width: 1080px) {
+  .catalog {
+    padding: 50px;
+  }
+
+  .product-card {
+    padding: 25px;
+  }
+
+  .carousel {
+    margin-bottom: 50px;
+  }
 }
 
-.product-title {
-    font-weight: bold;
-}
 
-.product-price {
-    color: #007bff; 
-} */
 
-/* Larger screen styles (720px and above) */
+
 @media (min-width: 480px) {
-    .carousel-item {
-        width: 52%; /* Adjust as needed */
-    }
+  .carousel-item {
+    width: 52%;
+  }
 }
 
 @media (min-width: 720px) {
   .carousel-item {
-      width: 38%; /* Adjust as needed */
+    width: 38%;
   }
 }
 
-/* Tablet and desktop styles (992px and above) */
 @media (min-width: 992px) {
-    .carousel-item {
-        width: 30%; /* Adjust as needed */
-    }
+  .carousel-item {
+    width: 30%;
+  }
 }
 
-/* Large desktop styles (1080px and above) */
 @media (min-width: 1080px) {
-    .carousel-item {
-        width: 25%; /* Adjust as needed */
-    }
+  .carousel-item {
+    width: 25%;
+  }
 }

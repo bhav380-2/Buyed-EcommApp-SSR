@@ -1,7 +1,9 @@
 
-const viewAllContainer = document.getElementsByClassName('view-all');
+const container = document.getElementsByClassName('view-all'); //product container
 
-const appendProductsToCatalogType1 = (products) => {
+
+// function for appending type1 product box to container
+const appendType1ProductsToCatalog = (products) => {
 
     products.forEach(product => {
         const productElement = document.createElement('div');
@@ -25,11 +27,12 @@ const appendProductsToCatalogType1 = (products) => {
 
     </div>
         `;
-        viewAllContainer[0].appendChild(productElement);
+        container[0].appendChild(productElement);
     });
 };
 
-const appendProductsToCatalogType2 = (products) => {
+// function for appending type2 product box to container
+const appendType2ProductsToCatalog = (products) => {
 
     products.forEach(product => {
         const productElement = document.createElement('div');
@@ -53,47 +56,40 @@ const appendProductsToCatalogType2 = (products) => {
 };
 
 
-
-let currentPage = 1;
-let flag = false;
+let currentPage = 1; // used for storing value of curr page number (product api) --> fakestoreapi does not provide pagination (here its of no use)
+let flag = false; 
 const fetchMoreProducts = async () => {
     try {
-        const response = await fetch(`https://fakestoreapi.com/products?page=${currentPage + 3}`);
-
+        const response = await fetch(`https://fakestoreapi.com/products?page=${currentPage + 1}`);
         const data = await response.json();
 
         let cardType = document.querySelector('#card-type').getAttribute('data-cardType');
 
-        console.log("*****************************",cardType);
+        if (cardType == 'type1') {
+            appendType1ProductsToCatalog(data);
 
-        if(cardType=='type1'){
-            appendProductsToCatalogType1(data);
+        } else {
 
-        }else{
-
-            appendProductsToCatalogType2(data);
+            appendType2ProductsToCatalog(data);
 
         }
 
-
-        
-     
-
         currentPage++;
+        
     } catch (error) {
         console.error('Error fetching more products:', error);
     }
 };
 
 const checkScroll = () => {
-    const scrollThreshold = 50; 
+    const scrollThreshold = 50;
     const scrollPosition = window.innerHeight + window.scrollY;
     const documentHeight = document.body.offsetHeight;
 
     if (scrollPosition >= documentHeight - scrollThreshold && flag) {
         fetchMoreProducts();
     }
-    flag =true;
+    flag = true;
 };
 
 window.addEventListener('scroll', checkScroll);

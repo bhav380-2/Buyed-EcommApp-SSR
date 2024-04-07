@@ -2,6 +2,9 @@
 
 This is an e-commerce application having two pages: catalog page and settings page
 
+## Hosted Link
+https://buyed-ecommapp-ssr.onrender.com
+
 ## Catalog Page
 
 The catalog page includes the following features:
@@ -42,6 +45,9 @@ To install and run the application locally, follow these steps:
 
 
 - From the settings page, you can customize the navigation bar, product card variant, and catalog display view.
+
+
+
 
 ## Technologies Used
 

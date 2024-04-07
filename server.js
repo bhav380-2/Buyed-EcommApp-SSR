@@ -1,19 +1,15 @@
 const express = require('express');
-// const fetch = require('node-fetch');
-
 const expressLayouts = require('express-ejs-layouts');
-
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//intial setting values
 module.exports.settingsData = {
     navbar: 'navbar2',
     view: 'viewAll',
     productCard: 'type2'
 };
 
-// Serve static files
 app.use(express.static('public'));
 
 // __________setting up view engine_________________
@@ -33,7 +29,6 @@ app.use('/', require('./routes/index'));
 
 
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
