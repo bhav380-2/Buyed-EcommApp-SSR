@@ -8,8 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 module.exports.settingsData = {
-    navbar: 'navbar1',
-    view: 'carousel',
+    navbar: 'navbar2',
+    view: 'viewAll',
     productCard: 'type2'
 };
 
