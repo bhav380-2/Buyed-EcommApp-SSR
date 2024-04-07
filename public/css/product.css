@@ -154,6 +154,15 @@
 
 @media (min-width: 992px) {
 
+  .product-card-1 {
+    height:360px;
+  }
+
+  .product-card-1 .product-image {
+    height: 205px;
+  }
+  
+
   .product-card-2 {
     min-height: 460px;
   }

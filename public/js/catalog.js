@@ -96,6 +96,8 @@ const checkScroll = () => {
     const scrollThreshold = 200;
     const scrollPosition = window.innerHeight + window.scrollY;
     const documentHeight = document.body.offsetHeight;
+
+    
     
 
     if (scrollPosition >= documentHeight - scrollThreshold && flag) {
@@ -104,7 +106,6 @@ const checkScroll = () => {
     flag = true;
 };
 
-console.log(localStorage.getItem('view'))
 if(localStorage.getItem('view')=='viewAll'){
     console.log("hi")
     window.addEventListener('scroll', checkScroll);

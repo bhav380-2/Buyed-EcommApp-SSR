@@ -82,14 +82,22 @@
 
 @media (min-width: 720px) {
   .carousel-item {
-    width: 38%;
+    width: 40%;
   }
+  .view-all {
+    gap: 80px;
+  }
+  
 }
 
 @media (min-width: 992px) {
   .carousel-item {
     width: 30%;
   }
+  .view-all {
+    gap: 80px;
+  }
+  
 }
 
 @media (min-width: 1080px) {
